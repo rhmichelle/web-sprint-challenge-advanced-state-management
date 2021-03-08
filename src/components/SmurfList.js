@@ -1,7 +1,7 @@
 import React from 'react';
 import Smurf from './Smurf';
 import { connect } from 'react-redux';
-import { fetchSmurfs } from '../actions/index';
+// import { } from '../actions/index';
 
  const SmurfList = (props) => {
     const isLoading = props.smurfs.isLoading;
@@ -29,7 +29,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { fetchSmurfs })(SmurfList);
+export default connect(mapStateToProps, { })(SmurfList);
 
 
 
