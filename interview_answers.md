@@ -5,6 +5,8 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
      /* Context API subverts React's Parent -> Child top-down approach. When you would usually have to transfer data via props and state, Context API allows to avoid prop drilling and easily transfer data from the root of the app to other components.
 
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+     /* */
+
 
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
      /* It grants us the ability to return functions out of our action creators and not just actions. */
