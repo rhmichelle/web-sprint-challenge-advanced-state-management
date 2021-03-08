@@ -12,6 +12,13 @@ export function addSmurf(smurf) {
     }
 }
 
+export function setError(error) {
+    return {
+        type: FETCH_SMURF_FAILED,
+        payload: error
+    }
+}
+
 
 export const fetchSmurfs = () => dispatch => {
     dispatch({type: FETCH_SMURF_BEGINS});

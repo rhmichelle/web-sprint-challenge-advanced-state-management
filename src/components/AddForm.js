@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addSmurf  } from '../actions/index';
+import { setError } from '../actions/index';
 
 const AddForm = (props) => {
+    console.log("this is an error", props.smurfs.error)
     const [state, setState] = useState({
         id: Date.now,
         name:"",
@@ -22,11 +24,11 @@ const AddForm = (props) => {
         e.preventDefault();
         props.addSmurf(state)
         if (state.name === "" || state.position === "" || state.nickname === "") {
-            errorMessage = "Name, position and nickname fields are required.";
+            setError("Name, position and nickname fields are required.");
         }
     }
 
-    const errorMessage = "";
+    // const errorMessage = ;
 
     return(<section>
         <h2>Add Smurf</h2>
@@ -48,7 +50,7 @@ const AddForm = (props) => {
                 <textarea onChange={handleChange} value={state.description} name="description" id="description" />
             </div>
             {
-                errorMessage && <div data-testid="errorAlert" className="alert alert-danger" role="alert">Error: {errorMessage}</div>
+                props.smurfs.error && <div data-testid="errorAlert" className="alert alert-danger" role="alert">Error: {props.smurfs.error}</div>
             }
             <button type="submit">Submit Smurf</button>
         </form>
