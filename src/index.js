@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createStore  } from 'redux';
+import { applyMiddleware, createStore  } from 'redux';
+import logger from 'redux-logger';
 import { Provider } from 'react-redux';
-import reducer from './reducers/index';
+import { reducer } from './reducers/index';
 import "./index.css";
 import App from "./App";
 
-const store = createStore(reducer);
+const store = createStore(
+    reducer,
+    applyMiddleware(logger));
 
 const { worker } = require('./mocks/browser');
 worker.start();

@@ -1,28 +1,39 @@
 import { FETCH_SMURF_SUCCESS } from "../actions";
 
 export const initialState = {
-    smurfs: {
+    smurfs: [{
         id:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
-        name:'Poppa Smurf',
+        name:'Poppa Smurf-Not test',
         position:'Village Leader',
         nickname: 'Pops',
         description: 'Papa is the practical village leader and the father figure of 100 or so young Smurfs. He is easily identified by his red Smurf hat, pants, and a shortly-trimmed white beard and moustache.'
+    },
+    {
+        id:"JzdWIiOiIxMjM0NTY3ODkwIiwibmFtZ",
+        name:'Smurfette',
+        position:'Beautician',
+        nickname: 'Smurfette',
+        description: 'Smurfette\'s role in the village is that of any other smurf; chores, and helping out where she can, but for her specifically, she is often seen to be very active in organizing events.'
+      }]
     }
-}
 
-const reducer = (state = initialState, action) => {
-    console.log("This is coming from the reducer", action)
-    switch(action.type) {
+
+export const reducer = (state = initialState, action) => {
+    console.log("something in reducer", action)
+        switch(action.type) {
         case FETCH_SMURF_SUCCESS:
             return {
                 ...state,
                 smurfs: [...state.smurfs, action.payload],
                 error: ""
             }
+        default: 
+            return state
     }
 }
 
-export default reducer;
+
+
 
 //Task List:
 //1. Adds the following state values into the initialState:
