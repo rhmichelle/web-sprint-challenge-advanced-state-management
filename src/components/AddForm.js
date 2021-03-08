@@ -4,6 +4,7 @@ import { addSmurf  } from '../actions/index';
 
 const AddForm = (props) => {
     const [state, setState] = useState({
+        id: Date.now,
         name:"",
         position:"",
         nickname:"",
