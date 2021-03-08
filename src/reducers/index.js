@@ -1,6 +1,10 @@
-import { FETCH_SMURF_SUCCESS } from "../actions";
+import { FETCH_SMURF_SUCCESS } from "../actions/index";
+import { FETCH_SMURF_BEGINS } from "../actions/index";
+import { FETCH_SMURF_FAILED } from "../actions/index";
 
 export const initialState = {
+    isLoading:  false,
+    error: "",
     smurfs: [{
         id:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
         name:'Poppa Smurf-Not test',
@@ -19,13 +23,23 @@ export const initialState = {
 
 
 export const reducer = (state = initialState, action) => {
-    console.log("something in reducer", action)
         switch(action.type) {
         case FETCH_SMURF_SUCCESS:
             return {
                 ...state,
                 smurfs: [...state.smurfs, action.payload],
                 error: ""
+            }
+        case FETCH_SMURF_BEGINS:
+            return {
+                ...state,
+                isLoading: true,
+                error: ""
+            }
+        case FETCH_SMURF_FAILED:
+            return {
+                ...state,
+                error: action.payload
             }
         default: 
             return state

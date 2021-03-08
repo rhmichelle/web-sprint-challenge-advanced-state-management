@@ -1,9 +1,11 @@
 // import axios from 'axios';
 
 export const FETCH_SMURF_SUCCESS = "FETCH_SMURF_SUCCESS";
+export const FETCH_SMURF_BEGINS = "FETCH_SMURF_BEGINS";
+export const FETCH_SMURF_FAILED = "FETCH_SMURF_FAILED";
+
 
 export function addSmurf(smurf) {
-    console.log("something in action", smurf)
     return{
         type: FETCH_SMURF_SUCCESS,
         payload: smurf
