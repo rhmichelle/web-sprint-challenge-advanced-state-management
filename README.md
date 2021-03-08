@@ -22,12 +22,12 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 
 ### Task 1: Project Setup
 
-* [ ] Fork and clone this repository.
-* [ ] Create a new working branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
-* [ ] **RUN** `npm install` to install your dependencies.
-* [ ] **RUN** `npm start` to start your application.
+* [X] Fork and clone this repository.
+* [X] Create a new working branch: git checkout -b `<firstName-lastName>`.
+* [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [X] Push commits: git push origin `<firstName-lastName>`.
+* [X] **RUN** `npm install` to install your dependencies.
+* [X] **RUN** `npm start` to start your application.
 
 ### Task 2: CodeGrade Setup
 
@@ -43,12 +43,12 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 #### reducers/index.js
   Add in the needed state and reducer cases to hold and modify smurf error messages, loading status and smurf data. **If at all possible, add in action cases one at a time, instead of all at once. Test your state connects and reducer cases as nessisary.**
 
-  * [ ] Adds the following state values into the initialState:
+  * [X] Adds the following state values into the initialState:
       - an array of smurfs
       - a boolean indicating if the app is loading
       - a string indicating a possible error message
 
-  * [ ] Add in the arguments needed to complete a standard reducer function.
+  * [X] Add in the arguments needed to complete a standard reducer function.
   * [ ] Add in a reducer case to accomidate the start of a smurf fetch.
   * [ ] Add in a reducer case to accomidate the successful smurf api fetch.
   * [ ] Add in a reducer cases to accomidate the failed smurf api fetch.
