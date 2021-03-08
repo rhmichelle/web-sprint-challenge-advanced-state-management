@@ -3,7 +3,7 @@
 export const FETCH_SMURF_SUCCESS = "FETCH_SMURF_SUCCESS";
 
 export function addSmurf(smurf) {
-    console.log("This is coming from th eaction -->", smurf)
+    console.log("This is coming from the action -->", smurf)
     return{
         type: FETCH_SMURF_SUCCESS,
         payload: smurf
