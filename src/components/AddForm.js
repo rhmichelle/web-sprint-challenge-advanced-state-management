@@ -17,6 +17,7 @@ const AddForm = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        console.log("This is handleSubmit -->", state)
         if (state.name === "" || state.position === "" || state.nickname === "") {
             errorMessage = "Name, position and nickname fields are required.";
         }
@@ -46,7 +47,7 @@ const AddForm = (props) => {
             {
                 errorMessage && <div data-testid="errorAlert" className="alert alert-danger" role="alert">Error: {errorMessage}</div>
             }
-            <button>Submit Smurf</button>
+            <button type="submit">Submit Smurf</button>
         </form>
     </section>);
 }
